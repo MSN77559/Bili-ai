@@ -1,0 +1,44 @@
+/* 设计 Token（06 §1 v1.5）：按真实 B 站截图还原基线（ADR-16），以此表为准 */
+:root {
+  /* 色板 */
+  --color-primary: #FB7299;        /* B 站品牌粉：主按钮、选中态、logo、投稿按钮 */
+  --color-primary-light: #FFF0F4;  /* 主色浅底：分类/导航 hover 底色 */
+  --color-bg: #F6F7F8;
+  --color-text: #18191C;
+  --color-text-secondary: #9499A0;
+  --color-card: #FFFFFF;
+  --color-danger: #F53F3F;         /* 错误提示与危险操作：正红，与粉色主色拉开色相 */
+  --color-border: #E3E5E7;
+
+  /* 渐变（ADR-05：CSS 渐变模拟插画，禁二进制图片） */
+  --gradient-home-banner: linear-gradient(120deg, #9fddc0 0%, #6fc39b 55%, #4da880 100%);
+  --gradient-space-banner: linear-gradient(120deg, #2b4c7e 0%, #3a6ea5 50%, #7fb0d8 100%);
+
+  /* 尺寸 */
+  --radius-card: 6px;
+  --space-block: 16px;
+  --space-card-gap: 16px;         /* 卡片网格间距（SearchView/FavoritesView 引用；2026-09-07 补定义） */
+  --font-size-base: 14px;
+  --size-avatar: 64px;             /* 空间页大头像（对齐真实截图） */
+  --size-nav-avatar: 40px;
+  --size-nav-height: 64px;         /* 对齐真实 B 站导航高度 */
+  --width-container: 1200px;
+  --width-sidebar: 200px;          /* 首页左侧分类竖栏 */
+  --height-home-banner: 160px;
+  --height-carousel: 240px;
+  --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }

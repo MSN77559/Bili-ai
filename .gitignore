@@ -1,0 +1,25 @@
+# Java Maven 编译输出
+target/
+!target/classes/*.properties
+
+# IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# AI 生成缓存
+.claude/
+
+# 笔记、计划、文档文件夹（不提交到代码仓库）
+plan/
+works/
+tools/
+
+# Markdown笔记
+*.md
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
